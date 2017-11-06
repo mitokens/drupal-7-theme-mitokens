@@ -1,0 +1,18 @@
+name = Mitokens
+core = 7.x
+description = This is a theme built by Mito Face.
+logo = images/logo.png
+screenshot = images/screenshot.png
+scripts[] = scripts/main.js
+;scripts[] = scripts/modernizr.js
+stylesheets[all][] = styles/main.css
+stylesheets[all][] = styles/tabset.css
+
+regions[header] = Header
+regions[column_first] = First Sidebar
+regions[column_content] = Main Content
+regions[column_last] = Second Sidebar
+regions[footer] = Footer
+
+settings['column_order_md'] = md-left
+settings['column_order_lg'] = lg-left-right

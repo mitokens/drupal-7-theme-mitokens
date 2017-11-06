@@ -1,0 +1,225 @@
+
+/* STYLES BY ELEMENT ******************************************************** */
+
+html {
+	box-sizing: border-box;
+	position: relative;
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 16px;
+}
+
+html > body {
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+	width: 100%;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	transition: all 200ms ease-in-out 2ms, visibility 0ms linear 0ms;
+}
+
+h1,
+h2,
+h3 {
+	font-family: "Source Serif Pro", serif;
+	margin: 0.5em auto;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+	margin-top: 0.25em;
+}
+
+h1 {
+	text-align: center;
+}
+
+i {
+	font-style: inherit;
+	opacity: 0.666;
+}
+
+i:not(:hover):not(:focus):not(:active) {
+	opacity: 0.333;
+}
+
+pre {
+	font-family: "Source Code Pro", monospace, monospaced;
+	overflow: auto;
+	padding: 0.5rem 1rem;
+	outline: 1px dashed #AAA;
+}
+
+video {
+	background: #AAA;
+	border: 1px solid #888;
+	border-radius: 0.25em;
+}
+
+
+/* STYLES BY CLASS ********************************************************** */
+
+.block {
+	background: #FED;
+	border: 1px dashed #AAA;
+	border-radius: 0.25rem;
+	margin: 0.5rem 0.75rem;
+	padding: 0.5rem 1rem 0.75rem;
+}
+
+.clearfix:before,
+.clearfix:after {
+	clear: both;
+	content: '';
+	display: table;
+}
+
+.menu.menu {
+	margin: 0.25rem auto;
+	padding-left: 0.75rem;
+}
+
+.page-node > .region-columns > .region-column-first,
+.page-node > .region-columns > .region-column-second {
+}
+
+.page-node > .region-columns > .region-column-content > .content-header {
+	display: block;
+}
+
+
+/* STYLES BY ID ************************************************************* */
+
+#page-columns,
+#page-footer,
+#page-header,
+#page-messages {
+	clear: both;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	width: 100%;
+		max-width: 80rem; /* 1280px */
+}
+
+#page-columns > * {
+	display: inline-block;
+	text-align: initial;
+}
+
+#page-columns > #page-column-first,
+#page-columns > #page-column-last {
+	width: 16rem; /* 256px */
+		min-width: 16rem; /* 256px */
+		max-width: 16rem; /* 256px */
+}
+
+#page-column-content {
+	width: 100%;
+		min-width: 20rem; /* 320px */
+}
+
+#page-column-content > .content-header {
+	margin: 0 0.5rem;
+}
+
+#page-messages {
+	display: inline-block;
+	text-align: initial;
+	width: auto;
+		min-width: 16rem; /* 320px */
+}
+
+#page-messages > * {
+	margin: 0.25rem 1rem;
+}
+
+
+/* STYLES BY MEDIA ********************************************************** */
+
+/* EXTRA SMALL SCREENS: under 320px */
+@media (max-width: 20rem) {
+	
+}
+
+/* SMALL SCREENS: under 640px */
+@media (max-width: 40rem) {
+	
+}
+
+/* MEDIUM SCREENS: 640px ~ 1040px */
+@media (min-width: 40rem) AND (max-width: 65rem) {
+	
+	#page-columns.columns-2.columns-md-left #page-column-content,
+	#page-columns.columns-3.columns-md-left #page-column-content {
+		float: right;
+		width: calc(100% - 16rem - 2px);
+	}
+	
+	#page-columns.columns-2.columns-md-right #page-column-content,
+	#page-columns.columns-3.columns-md-right #page-column-content {
+		float: left;
+		width: calc(100% - 16rem - 2px);
+	}
+	
+	#page-columns.columns-md-left #page-column-first,
+	#page-columns.columns-md-left #page-column-last {
+		clear: left;
+		float: left;
+	}
+	
+	#page-columns.columns-md-right #page-column-first,
+	#page-columns.columns-md-right #page-column-last {
+		clear: right;
+		float: right;
+	}
+	
+}
+
+/* LARGE SCREENS: over 1040px */
+@media (min-width: 64rem) {
+	
+	#page-columns {
+		display: flex;
+	}
+	
+	#page-columns.columns-lg-left-right #page-column-first,
+	#page-columns.columns-lg-right-left #page-column-last {
+		flex-grow: 1;
+		order: -1;
+	}
+	
+	#page-columns.columns-lg-left-right #page-column-last,
+	#page-columns.columns-lg-right-left #page-column-first {
+		flex-grow: 1;
+		order: 1;
+	}
+	
+	#page-columns.columns-2 #page-column-content {
+		flex-grow: 3;
+		order: 0;
+	}
+	
+	#page-columns.columns-3 #page-column-content {
+		flex-grow: 2;
+		order: 0;
+	}
+	
+}
+
+/* EXTRA LARGE SCREENS: over 1280px */
+@media (min-width: 80rem) {
+	
+	/* CURRENT SOLUTION: just stop scaling. */
+	/* TODO: adjust font size to scale. */
+	
+}

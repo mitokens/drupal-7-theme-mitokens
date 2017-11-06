@@ -1,0 +1,729 @@
+
+.tabs.tabs,
+.tabset.tabset {
+	border-bottom: 1px solid inherit;
+	margin: 0;
+	overflow: hidden;
+	padding: 0 0.5em;
+	position: relative;
+	text-align: center;
+}
+
+.tabs.tabs > *,
+.tabset.tabset > * {
+	display: inline-block;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+
+.tabs.tabs > * > a:only-child,
+.tabset.tabset > * > a:only-child {
+	border-bottom: none;
+	border-top-left-radius: 0.25em;
+	border-top-right-radius: 0.25em;
+	display: inline-block;
+	padding: 0.25em 0.5em;
+	width: 100%;
+}
+
+
+/*
+** Tabs select their children, and shrink their width to fit on one line.
+** Set a min-width to determine the breakpoint at which tabs start applying.
+** TODO: Turn the breakpoint into a theme variable.
+*/
+@media (min-width: 40rem) {
+	
+	/*select the first child of 1, and then all its siblings*/
+	.tabs > *:first-child:nth-last-child(1),
+	.tabs > *:first-child:nth-last-child(1) ~ *,
+	.tabs-1 > * {
+		width: calc(100% - 2px) !important;
+	}
+
+	/*select the first child of 2, and then all its siblings*/
+	.tabs > *:first-child:nth-last-child(2),
+	.tabs > *:first-child:nth-last-child(2) ~ *,
+	.tabs-2 > * {
+		width: calc(50% - 2px) !important;
+	}
+
+	.tabs > .double-wide:first-child:nth-last-child(2),
+	.tabs > *:first-child:nth-last-child(2) ~ .double-wide,
+	.tabs-2 > .double-wide {
+		width: calc(100% - 2px) !important;
+	}
+
+	/*select the first child of 3, and then all its siblings*/
+	.tabs > *:first-child:nth-last-child(3),
+	.tabs > *:first-child:nth-last-child(3) ~ *,
+	.tabs-3 > * {
+		width: calc(33.33% - 2px) !important;
+	}
+
+	.tabs > .double-wide:first-child:nth-last-child(3),
+	.tabs > *:first-child:nth-last-child(3) ~ .double-wide,
+	.tabs-3 > .double-wide {
+		width: calc(66.66% - 2px) !important;
+	}
+
+	.tabs > .triple-wide:first-child:nth-last-child(3),
+	.tabs > *:first-child:nth-last-child(3) ~ .triple-wide,
+	.tabs-3 > .triple-wide {
+		width: calc(100% - 2px) !important;
+	}
+
+	/*select the first child of 4, and then all its siblings*/
+	.tabs > *:first-child:nth-last-child(4),
+	.tabs > *:first-child:nth-last-child(4) ~ *,
+	.tabs-4 > * {
+		width: calc(25% - 2px) !important;
+	}
+
+	.tabs > .double-wide:first-child:nth-last-child(4),
+	.tabs > *:first-child:nth-last-child(4) ~ .double-wide,
+	.tabs-4 > .double-wide {
+		width: calc(50% - 2px) !important;
+	}
+
+	.tabs > .triple-wide:first-child:nth-last-child(4),
+	.tabs > *:first-child:nth-last-child(4) ~ .triple-wide,
+	.tabs-4 > .triple-wide {
+		width: calc(75% - 2px) !important;
+	}
+
+	.tabs > .quadruple-wide:first-child:nth-last-child(4),
+	.tabs > *:first-child:nth-last-child(4) ~ .quadruple-wide,
+	.tabs-4 > .quadruple-wide {
+		width: calc(100% - 2px) !important;
+	}
+
+	/*select the first child of 5, and then all its siblings*/
+	.tabs > *:first-child:nth-last-child(5),
+	.tabs > *:first-child:nth-last-child(5) ~ *,
+	.tabs-5 > * {
+		width: calc(20% - 2px) !important;
+	}
+
+	.tabs > .double-wide:first-child:nth-last-child(5),
+	.tabs > *:first-child:nth-last-child(5) ~ .double-wide,
+	.tabs-5 > .double-wide {
+		width: calc(40% - 2px) !important;
+	}
+
+	.tabs > .triple-wide:first-child:nth-last-child(5),
+	.tabs > *:first-child:nth-last-child(5) ~ .triple-wide,
+	.tabs-5 > .triple-wide {
+		width: calc(60% - 2px) !important;
+	}
+
+	.tabs > .quadruple-wide:first-child:nth-last-child(5),
+	.tabs > *:first-child:nth-last-child(5) ~ .quadruple-wide,
+	.tabs-5 > .quadruple-wide {
+		width: calc(80% - 2px) !important;
+	}
+
+	.tabs > .quintuple-wide:first-child:nth-last-child(5),
+	.tabs > *:first-child:nth-last-child(5) ~ .quintuple-wide,
+	.tabs-5 > .quintuple-wide {
+		width: calc(100% - 2px) !important;
+	}
+
+	/*select the first child of 6, and then all its siblings*/
+	.tabs > *:first-child:nth-last-child(6),
+	.tabs > *:first-child:nth-last-child(6) ~ *,
+	.tabs-6 > * {
+		width: calc(16.66% - 2px) !important;
+	}
+
+	.tabs > .double-wide:first-child:nth-last-child(6),
+	.tabs > *:first-child:nth-last-child(6) ~ .double-wide,
+	.tabs-6 > .double-wide {
+		width: calc(33.33% - 2px) !important;
+	}
+
+	.tabs > .triple-wide:first-child:nth-last-child(6),
+	.tabs > *:first-child:nth-last-child(6) ~ .triple-wide,
+	.tabs-6 > .triple-wide {
+		width: calc(50% - 2px) !important;
+	}
+
+	.tabs > .quadruple-wide:first-child:nth-last-child(6),
+	.tabs > *:first-child:nth-last-child(6) ~ .quadruple-wide,
+	.tabs-6 > .quadruple-wide {
+		width: calc(66.66% - 2px) !important;
+	}
+
+	.tabs > .quintuple-wide:first-child:nth-last-child(6),
+	.tabs > *:first-child:nth-last-child(6) ~ .quintuple-wide,
+	.tabs-6 > .quintuple-wide {
+		width: calc(83.33% - 2px) !important;
+	}
+
+	.tabs > .hextuple-wide:first-child:nth-last-child(6),
+	.tabs > *:first-child:nth-last-child(6) ~ .hextuple-wide,
+	.tabs-6 > .hextuple-wide {
+		width: calc(100% - 2px) !important;
+	}
+
+	/*select the first child of 7, and then all its siblings*/
+	.tabs > *:first-child:nth-last-child(7),
+	.tabs > *:first-child:nth-last-child(7) ~ *,
+	.tabs-7 > * {
+		width: calc(14.28% - 2px) !important;
+	}
+
+	.tabs > .double-wide:first-child:nth-last-child(7),
+	.tabs > *:first-child:nth-last-child(7) ~ .double-wide,
+	.tabs-7 > .double-wide {
+		width: calc(28.57% - 2px) !important;
+	}
+
+	.tabs > .triple-wide:first-child:nth-last-child(7),
+	.tabs > *:first-child:nth-last-child(7) ~ .triple-wide,
+	.tabs-7 > .triple-wide {
+		width: calc(42.85% - 2px) !important;
+	}
+
+	.tabs > .quadruple-wide:first-child:nth-last-child(7),
+	.tabs > *:first-child:nth-last-child(7) ~ .quadruple-wide,
+	.tabs-7 > .quadruple-wide {
+		width: calc(57.14% - 2px) !important;
+	}
+
+	.tabs > .quintuple-wide:first-child:nth-last-child(7),
+	.tabs > *:first-child:nth-last-child(7) ~ .quintuple-wide,
+	.tabs-7 > .quintuple-wide {
+		width: calc(71.42% - 2px) !important;
+	}
+
+	.tabs > .hextuple-wide:first-child:nth-last-child(7),
+	.tabs > *:first-child:nth-last-child(7) ~ .hextuple-wide,
+	.tabs-7 > .hextuple-wide {
+		width: calc(85.71% - 2px) !important;
+	}
+
+	.tabs > .septuple-wide:first-child:nth-last-child(7),
+	.tabs > *:first-child:nth-last-child(7) ~ .septuple-wide,
+	.tabs-7 > .septuple-wide {
+		width: calc(100% - 2px) !important;
+	}
+
+	/*select the first child of 8, and then all its siblings*/
+	.tabs > *:first-child:nth-last-child(8),
+	.tabs > *:first-child:nth-last-child(8) ~ *,
+	.tabs-8 > * {
+		width: calc(12.5% - 2px) !important;
+	}
+
+	.tabs > .double-wide:first-child:nth-last-child(8),
+	.tabs > *:first-child:nth-last-child(8) ~ .double-wide,
+	.tabs-8 > .double-wide {
+		width: calc(25% - 2px) !important;
+	}
+
+	.tabs > .triple-wide:first-child:nth-last-child(8),
+	.tabs > *:first-child:nth-last-child(8) ~ .triple-wide,
+	.tabs-8 > .triple-wide {
+		width: calc(37.5% - 2px) !important;
+	}
+
+	.tabs > .quadruple-wide:first-child:nth-last-child(8),
+	.tabs > *:first-child:nth-last-child(8) ~ .quadruple-wide,
+	.tabs-8 > .quadruple-wide {
+		width: calc(50% - 2px) !important;
+	}
+
+	.tabs > .quintuple-wide:first-child:nth-last-child(8),
+	.tabs > *:first-child:nth-last-child(8) ~ .quintuple-wide,
+	.tabs-8 > .quintuple-wide {
+		width: calc(62.5% - 2px) !important;
+	}
+
+	.tabs > .hextuple-wide:first-child:nth-last-child(8),
+	.tabs > *:first-child:nth-last-child(8) ~ .hextuple-wide,
+	.tabs-8 > .hextuple-wide {
+		width: calc(75% - 2px) !important;
+	}
+
+	.tabs > .septuple-wide:first-child:nth-last-child(8),
+	.tabs > *:first-child:nth-last-child(8) ~ .septuple-wide,
+	.tabs-8 > .septuple-wide {
+		width: calc(87.5% - 2px) !important;
+	}
+
+	.tabs > .octuple-wide:first-child:nth-last-child(8),
+	.tabs > *:first-child:nth-last-child(8) ~ .octuple-wide,
+	.tabs-8 > .octuple-wide {
+		width: calc(100% - 2px) !important;
+	}
+
+	/*select the first child of 9, and then all its siblings*/
+	.tabs > *:first-child:nth-last-child(9),
+	.tabs > *:first-child:nth-last-child(9) ~ *,
+	.tabs-9 > * {
+		width: calc(11.11% - 2px) !important;
+	}
+
+	.tabs > .double-wide:first-child:nth-last-child(9),
+	.tabs > *:first-child:nth-last-child(9) ~ .double-wide,
+	.tabs-9 > .double-wide {
+		width: calc(22.22% - 2px) !important;
+	}
+
+	.tabs > .triple-wide:first-child:nth-last-child(9),
+	.tabs > *:first-child:nth-last-child(9) ~ .triple-wide,
+	.tabs-9 > .triple-wide {
+		width: calc(33.33% - 2px) !important;
+	}
+
+	.tabs > .quadruple-wide:first-child:nth-last-child(9),
+	.tabs > *:first-child:nth-last-child(9) ~ .quadruple-wide,
+	.tabs-9 > .quadruple-wide {
+		width: calc(44.44% - 2px) !important;
+	}
+
+	.tabs > .quintuple-wide:first-child:nth-last-child(9),
+	.tabs > *:first-child:nth-last-child(9) ~ .quintuple-wide,
+	.tabs-9 > .quintuple-wide {
+		width: calc(55.55% - 2px) !important;
+	}
+
+	.tabs > .hextuple-wide:first-child:nth-last-child(9),
+	.tabs > *:first-child:nth-last-child(9) ~ .hextuple-wide,
+	.tabs-9 > .hextuple-wide {
+		width: calc(66.66% - 2px) !important;
+	}
+
+	.tabs > .septuple-wide:first-child:nth-last-child(9),
+	.tabs > *:first-child:nth-last-child(9) ~ .septuple-wide,
+	.tabs-9 > .septuple-wide {
+		width: calc(77.77% - 2px) !important;
+	}
+
+	.tabs > .octuple-wide:first-child:nth-last-child(9),
+	.tabs > *:first-child:nth-last-child(9) ~ .octuple-wide,
+	.tabs-9 > .octuple-wide {
+		width: calc(88.88% - 2px) !important;
+	}
+
+	.tabs > .nonuple-wide:first-child:nth-last-child(9),
+	.tabs > *:first-child:nth-last-child(9) ~ .nonuple-wide,
+	.tabs-9 > .nonuple-wide {
+		width: calc(100% - 2px) !important;
+	}
+
+	/*select the first child of 10, and then all its siblings*/
+	.tabs > *:first-child:nth-last-child(10),
+	.tabs > *:first-child:nth-last-child(10) ~ *,
+	.tabs-10 > * {
+		width: calc(10% - 2px) !important;
+	}
+
+	.tabs > .double-wide:first-child:nth-last-child(10),
+	.tabs > *:first-child:nth-last-child(10) ~ .double-wide,
+	.tabs-10 > .double-wide {
+		width: calc(20% - 2px) !important;
+	}
+
+	.tabs > .triple-wide:first-child:nth-last-child(10),
+	.tabs > *:first-child:nth-last-child(10) ~ .triple-wide,
+	.tabs-10 > .triple-wide {
+		width: calc(30% - 2px) !important;
+	}
+
+	.tabs > .quadruple-wide:first-child:nth-last-child(10),
+	.tabs > *:first-child:nth-last-child(10) ~ .quadruple-wide,
+	.tabs-10 > .quadruple-wide {
+		width: calc(40% - 2px) !important;
+	}
+
+	.tabs > .quintuple-wide:first-child:nth-last-child(10),
+	.tabs > *:first-child:nth-last-child(10) ~ .quintuple-wide,
+	.tabs-10 > .quintuple-wide {
+		width: calc(50% - 2px) !important;
+	}
+
+	.tabs > .hextuple-wide:first-child:nth-last-child(10),
+	.tabs > *:first-child:nth-last-child(10) ~ .hextuple-wide,
+	.tabs-10 > .hextuple-wide {
+		width: calc(60% - 2px) !important;
+	}
+
+	.tabs > .septuple-wide:first-child:nth-last-child(10),
+	.tabs > *:first-child:nth-last-child(10) ~ .septuple-wide,
+	.tabs-10 > .septuple-wide {
+		width: calc(70% - 2px) !important;
+	}
+
+	.tabs > .octuple-wide:first-child:nth-last-child(10),
+	.tabs > *:first-child:nth-last-child(10) ~ .octuple-wide,
+	.tabs-10 > .octuple-wide {
+		width: calc(80% - 2px) !important;
+	}
+
+	.tabs > .nonuple-wide:first-child:nth-last-child(10),
+	.tabs > *:first-child:nth-last-child(10) ~ .nonuple-wide,
+	.tabs-10 > .nonuple-wide {
+		width: calc(100% - 2px) !important;
+	}
+
+	.tabs > .decuple-wide:first-child:nth-last-child(10),
+	.tabs > *:first-child:nth-last-child(10) ~ .decuple-wide,
+	.tabs-10 > .decuple-wide {
+		width: calc(100% - 2px) !important;
+	}
+	
+}
+
+
+/*
+** Tabssets select their children, and shrink their width to fit on one line.
+** Tabsets are the same as tabs, but with a different breakpoint.
+** Set a min-width to determine the breakpoint at which tabssets start applying.
+** TODO: Turn the breakpoint into a theme variable.
+*/
+@media (min-width: 0rem) {
+	
+	/*select the first child of 1, and then all its siblings*/
+	.tabset > *:first-child:nth-last-child(1),
+	.tabset > *:first-child:nth-last-child(1) ~ *,
+	.tabset-1 > * {
+		width: calc(100% - 2px) !important;
+	}
+
+	/*select the first child of 2, and then all its siblings*/
+	.tabset > *:first-child:nth-last-child(2),
+	.tabset > *:first-child:nth-last-child(2) ~ *,
+	.tabset-2 > * {
+		width: calc(50% - 2px) !important;
+	}
+
+	.tabset > .double-wide:first-child:nth-last-child(2),
+	.tabset > *:first-child:nth-last-child(2) ~ .double-wide,
+	.tabset-2 > .double-wide {
+		width: calc(100% - 2px) !important;
+	}
+
+	/*select the first child of 3, and then all its siblings*/
+	.tabset > *:first-child:nth-last-child(3),
+	.tabset > *:first-child:nth-last-child(3) ~ *,
+	.tabset-3 > * {
+		width: calc(33.33% - 2px) !important;
+	}
+
+	.tabset > .double-wide:first-child:nth-last-child(3),
+	.tabset > *:first-child:nth-last-child(3) ~ .double-wide,
+	.tabset-3 > .double-wide {
+		width: calc(66.66% - 2px) !important;
+	}
+
+	.tabset > .triple-wide:first-child:nth-last-child(3),
+	.tabset > *:first-child:nth-last-child(3) ~ .triple-wide,
+	.tabset-3 > .triple-wide {
+		width: calc(100% - 2px) !important;
+	}
+
+	/*select the first child of 4, and then all its siblings*/
+	.tabset > *:first-child:nth-last-child(4),
+	.tabset > *:first-child:nth-last-child(4) ~ *,
+	.tabset-4 > * {
+		width: calc(25% - 2px) !important;
+	}
+
+	.tabset > .double-wide:first-child:nth-last-child(4),
+	.tabset > *:first-child:nth-last-child(4) ~ .double-wide,
+	.tabset-4 > .double-wide {
+		width: calc(50% - 2px) !important;
+	}
+
+	.tabset > .triple-wide:first-child:nth-last-child(4),
+	.tabset > *:first-child:nth-last-child(4) ~ .triple-wide,
+	.tabset-4 > .triple-wide {
+		width: calc(75% - 2px) !important;
+	}
+
+	.tabset > .quadruple-wide:first-child:nth-last-child(4),
+	.tabset > *:first-child:nth-last-child(4) ~ .quadruple-wide,
+	.tabset-4 > .quadruple-wide {
+		width: calc(100% - 2px) !important;
+	}
+
+	/*select the first child of 5, and then all its siblings*/
+	.tabset > *:first-child:nth-last-child(5),
+	.tabset > *:first-child:nth-last-child(5) ~ *,
+	.tabset-5 > * {
+		width: calc(20% - 2px) !important;
+	}
+
+	.tabset > .double-wide:first-child:nth-last-child(5),
+	.tabset > *:first-child:nth-last-child(5) ~ .double-wide,
+	.tabset-5 > .double-wide {
+		width: calc(40% - 2px) !important;
+	}
+
+	.tabset > .triple-wide:first-child:nth-last-child(5),
+	.tabset > *:first-child:nth-last-child(5) ~ .triple-wide,
+	.tabset-5 > .triple-wide {
+		width: calc(60% - 2px) !important;
+	}
+
+	.tabset > .quadruple-wide:first-child:nth-last-child(5),
+	.tabset > *:first-child:nth-last-child(5) ~ .quadruple-wide,
+	.tabset-5 > .quadruple-wide {
+		width: calc(80% - 2px) !important;
+	}
+
+	.tabset > .quintuple-wide:first-child:nth-last-child(5),
+	.tabset > *:first-child:nth-last-child(5) ~ .quintuple-wide,
+	.tabset-5 > .quintuple-wide {
+		width: calc(100% - 2px) !important;
+	}
+
+	/*select the first child of 6, and then all its siblings*/
+	.tabset > *:first-child:nth-last-child(6),
+	.tabset > *:first-child:nth-last-child(6) ~ *,
+	.tabset-6 > * {
+		width: calc(16.66% - 2px) !important;
+	}
+
+	.tabset > .double-wide:first-child:nth-last-child(6),
+	.tabset > *:first-child:nth-last-child(6) ~ .double-wide,
+	.tabset-6 > .double-wide {
+		width: calc(33.33% - 2px) !important;
+	}
+
+	.tabset > .triple-wide:first-child:nth-last-child(6),
+	.tabset > *:first-child:nth-last-child(6) ~ .triple-wide,
+	.tabset-6 > .triple-wide {
+		width: calc(50% - 2px) !important;
+	}
+
+	.tabset > .quadruple-wide:first-child:nth-last-child(6),
+	.tabset > *:first-child:nth-last-child(6) ~ .quadruple-wide,
+	.tabset-6 > .quadruple-wide {
+		width: calc(66.66% - 2px) !important;
+	}
+
+	.tabset > .quintuple-wide:first-child:nth-last-child(6),
+	.tabset > *:first-child:nth-last-child(6) ~ .quintuple-wide,
+	.tabset-6 > .quintuple-wide {
+		width: calc(83.33% - 2px) !important;
+	}
+
+	.tabset > .hextuple-wide:first-child:nth-last-child(6),
+	.tabset > *:first-child:nth-last-child(6) ~ .hextuple-wide,
+	.tabset-6 > .hextuple-wide {
+		width: calc(100% - 2px) !important;
+	}
+
+	/*select the first child of 7, and then all its siblings*/
+	.tabset > *:first-child:nth-last-child(7),
+	.tabset > *:first-child:nth-last-child(7) ~ *,
+	.tabset-7 > * {
+		width: calc(14.28% - 2px) !important;
+	}
+
+	.tabset > .double-wide:first-child:nth-last-child(7),
+	.tabset > *:first-child:nth-last-child(7) ~ .double-wide,
+	.tabset-7 > .double-wide {
+		width: calc(28.57% - 2px) !important;
+	}
+
+	.tabset > .triple-wide:first-child:nth-last-child(7),
+	.tabset > *:first-child:nth-last-child(7) ~ .triple-wide,
+	.tabset-7 > .triple-wide {
+		width: calc(42.85% - 2px) !important;
+	}
+
+	.tabset > .quadruple-wide:first-child:nth-last-child(7),
+	.tabset > *:first-child:nth-last-child(7) ~ .quadruple-wide,
+	.tabset-7 > .quadruple-wide {
+		width: calc(57.14% - 2px) !important;
+	}
+
+	.tabset > .quintuple-wide:first-child:nth-last-child(7),
+	.tabset > *:first-child:nth-last-child(7) ~ .quintuple-wide,
+	.tabset-7 > .quintuple-wide {
+		width: calc(71.42% - 2px) !important;
+	}
+
+	.tabset > .hextuple-wide:first-child:nth-last-child(7),
+	.tabset > *:first-child:nth-last-child(7) ~ .hextuple-wide,
+	.tabset-7 > .hextuple-wide {
+		width: calc(85.71% - 2px) !important;
+	}
+
+	.tabset > .septuple-wide:first-child:nth-last-child(7),
+	.tabset > *:first-child:nth-last-child(7) ~ .septuple-wide,
+	.tabset-7 > .septuple-wide {
+		width: calc(100% - 2px) !important;
+	}
+
+	/*select the first child of 8, and then all its siblings*/
+	.tabset > *:first-child:nth-last-child(8),
+	.tabset > *:first-child:nth-last-child(8) ~ *,
+	.tabset-8 > * {
+		width: calc(12.5% - 2px) !important;
+	}
+
+	.tabset > .double-wide:first-child:nth-last-child(8),
+	.tabset > *:first-child:nth-last-child(8) ~ .double-wide,
+	.tabset-8 > .double-wide {
+		width: calc(25% - 2px) !important;
+	}
+
+	.tabset > .triple-wide:first-child:nth-last-child(8),
+	.tabset > *:first-child:nth-last-child(8) ~ .triple-wide,
+	.tabset-8 > .triple-wide {
+		width: calc(37.5% - 2px) !important;
+	}
+
+	.tabset > .quadruple-wide:first-child:nth-last-child(8),
+	.tabset > *:first-child:nth-last-child(8) ~ .quadruple-wide,
+	.tabset-8 > .quadruple-wide {
+		width: calc(50% - 2px) !important;
+	}
+
+	.tabset > .quintuple-wide:first-child:nth-last-child(8),
+	.tabset > *:first-child:nth-last-child(8) ~ .quintuple-wide,
+	.tabset-8 > .quintuple-wide {
+		width: calc(62.5% - 2px) !important;
+	}
+
+	.tabset > .hextuple-wide:first-child:nth-last-child(8),
+	.tabset > *:first-child:nth-last-child(8) ~ .hextuple-wide,
+	.tabset-8 > .hextuple-wide {
+		width: calc(75% - 2px) !important;
+	}
+
+	.tabset > .septuple-wide:first-child:nth-last-child(8),
+	.tabset > *:first-child:nth-last-child(8) ~ .septuple-wide,
+	.tabset-8 > .septuple-wide {
+		width: calc(87.5% - 2px) !important;
+	}
+
+	.tabset > .octuple-wide:first-child:nth-last-child(8),
+	.tabset > *:first-child:nth-last-child(8) ~ .octuple-wide,
+	.tabset-8 > .octuple-wide {
+		width: calc(100% - 2px) !important;
+	}
+
+	/*select the first child of 9, and then all its siblings*/
+	.tabset > *:first-child:nth-last-child(9),
+	.tabset > *:first-child:nth-last-child(9) ~ *,
+	.tabset-9 > * {
+		width: calc(11.11% - 2px) !important;
+	}
+
+	.tabset > .double-wide:first-child:nth-last-child(9),
+	.tabset > *:first-child:nth-last-child(9) ~ .double-wide,
+	.tabset-9 > .double-wide {
+		width: calc(22.22% - 2px) !important;
+	}
+
+	.tabset > .triple-wide:first-child:nth-last-child(9),
+	.tabset > *:first-child:nth-last-child(9) ~ .triple-wide,
+	.tabset-9 > .triple-wide {
+		width: calc(33.33% - 2px) !important;
+	}
+
+	.tabset > .quadruple-wide:first-child:nth-last-child(9),
+	.tabset > *:first-child:nth-last-child(9) ~ .quadruple-wide,
+	.tabset-9 > .quadruple-wide {
+		width: calc(44.44% - 2px) !important;
+	}
+
+	.tabset > .quintuple-wide:first-child:nth-last-child(9),
+	.tabset > *:first-child:nth-last-child(9) ~ .quintuple-wide,
+	.tabset-9 > .quintuple-wide {
+		width: calc(55.55% - 2px) !important;
+	}
+
+	.tabset > .hextuple-wide:first-child:nth-last-child(9),
+	.tabset > *:first-child:nth-last-child(9) ~ .hextuple-wide,
+	.tabset-9 > .hextuple-wide {
+		width: calc(66.66% - 2px) !important;
+	}
+
+	.tabset > .septuple-wide:first-child:nth-last-child(9),
+	.tabset > *:first-child:nth-last-child(9) ~ .septuple-wide,
+	.tabset-9 > .septuple-wide {
+		width: calc(77.77% - 2px) !important;
+	}
+
+	.tabset > .octuple-wide:first-child:nth-last-child(9),
+	.tabset > *:first-child:nth-last-child(9) ~ .octuple-wide,
+	.tabset-9 > .octuple-wide {
+		width: calc(88.88% - 2px) !important;
+	}
+
+	.tabset > .nonuple-wide:first-child:nth-last-child(9),
+	.tabset > *:first-child:nth-last-child(9) ~ .nonuple-wide,
+	.tabset-9 > .nonuple-wide {
+		width: calc(100% - 2px) !important;
+	}
+
+	/*select the first child of 10, and then all its siblings*/
+	.tabset > *:first-child:nth-last-child(10),
+	.tabset > *:first-child:nth-last-child(10) ~ *,
+	.tabset-10 > * {
+		width: calc(10% - 2px) !important;
+	}
+
+	.tabset > .double-wide:first-child:nth-last-child(10),
+	.tabset > *:first-child:nth-last-child(10) ~ .double-wide,
+	.tabset-10 > .double-wide {
+		width: calc(20% - 2px) !important;
+	}
+
+	.tabset > .triple-wide:first-child:nth-last-child(10),
+	.tabset > *:first-child:nth-last-child(10) ~ .triple-wide,
+	.tabset-10 > .triple-wide {
+		width: calc(30% - 2px) !important;
+	}
+
+	.tabset > .quadruple-wide:first-child:nth-last-child(10),
+	.tabset > *:first-child:nth-last-child(10) ~ .quadruple-wide,
+	.tabset-10 > .quadruple-wide {
+		width: calc(40% - 2px) !important;
+	}
+
+	.tabset > .quintuple-wide:first-child:nth-last-child(10),
+	.tabset > *:first-child:nth-last-child(10) ~ .quintuple-wide,
+	.tabset-10 > .quintuple-wide {
+		width: calc(50% - 2px) !important;
+	}
+
+	.tabset > .hextuple-wide:first-child:nth-last-child(10),
+	.tabset > *:first-child:nth-last-child(10) ~ .hextuple-wide,
+	.tabset-10 > .hextuple-wide {
+		width: calc(60% - 2px) !important;
+	}
+
+	.tabset > .septuple-wide:first-child:nth-last-child(10),
+	.tabset > *:first-child:nth-last-child(10) ~ .septuple-wide,
+	.tabset-10 > .septuple-wide {
+		width: calc(70% - 2px) !important;
+	}
+
+	.tabset > .octuple-wide:first-child:nth-last-child(10),
+	.tabset > *:first-child:nth-last-child(10) ~ .octuple-wide,
+	.tabset-10 > .octuple-wide {
+		width: calc(80% - 2px) !important;
+	}
+
+	.tabset > .nonuple-wide:first-child:nth-last-child(10),
+	.tabset > *:first-child:nth-last-child(10) ~ .nonuple-wide,
+	.tabset-10 > .nonuple-wide {
+		width: calc(100% - 2px) !important;
+	}
+
+	.tabset > .decuple-wide:first-child:nth-last-child(10),
+	.tabset > *:first-child:nth-last-child(10) ~ .decuple-wide,
+	.tabset-10 > .decuple-wide {
+		width: calc(100% - 2px) !important;
+	}
+	
+}
